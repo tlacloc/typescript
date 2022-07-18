@@ -6,10 +6,12 @@
   login('email', 'password');
 
   // new type:
+  let users: any[] = [];
 
-  const login2 = (data: { email: string, password: string }): void => {
-    console.log(`${data.email} logged in with password ${data.password}`);
+  const login2 = (data: { email: string, password: string, gender?: string }): void => {
+    users.push(data);
   }
 
   login2({ email: 'email', password: 'password' });
+  login2({ email: 'email2', password: 'password2', gender: 'male' });
 })();
